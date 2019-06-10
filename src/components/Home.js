@@ -3,12 +3,18 @@ import { connect } from 'react-redux';
 
 class Home extends Component {
     state = {}
+    btnIncrementCounter = (e) => {
+        e.preventDefault();
+        this.props.dispatch({ type: "INCREMENT" })
+        console.log('Hello click');
+    }
     render() {
         console.log('---Home props---', this.props);
-        const {count} = this.props;
+        const { count } = this.props;
         return (
             <div>
                 <h1>Home Page {count}</h1>
+                <button className="btn btn-success" onClick={this.btnIncrementCounter}>Counter++</button>
             </div>
         );
     }
