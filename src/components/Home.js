@@ -26,4 +26,3 @@ const mapStateProps = (state) => {
     };
 }
 export default connect(mapStateProps)(Home);
-export default connect()(Home);
