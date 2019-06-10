@@ -5,9 +5,10 @@ class Home extends Component {
     state = {}
     render() {
         console.log('---Home props---', this.props);
+        const {count} = this.props;
         return (
             <div>
-                <h1>Home Page</h1>
+                <h1>Home Page {count}</h1>
             </div>
         );
     }
